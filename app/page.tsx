@@ -71,7 +71,7 @@ export default async function Portfolio() {
               <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
             </span>
             <span className="text-slate-600 text-xs font-bold uppercase tracking-[0.1em]">
-              Disponible para proyectos en <span className="text-blue-600">Perú</span>
+              Disponible para proyectos en <span className="text-blue-600">Todo el Mundo</span>
             </span>
           </div>
 
