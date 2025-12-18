@@ -1,50 +1,40 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ROBERTO.SOLUTIONS | Software a Medida",
-  description: "Especialista en digitalizar empresas con sistemas a medida y dashboards de gestión en Lima, Perú.",
-  // Esto refuerza la previsualización
+  title: "Roberto Solutions | Programador de Sistemas y Webs en Perú",
+  description: "Especialista en desarrollo de software a medida, sistemas de gestión e inventarios y páginas web de alta conversión en Lima, Perú.",
+  keywords: [
+    "Programador en Perú", 
+    "Desarrollo de sistemas Lima", 
+    "Creación de software administrativo", 
+    "Desarrollador Next.js Perú", 
+    "Sistemas de inventarios a medida",
+    "Roberto Solutions"
+  ],
+  authors: [{ name: "Roberto" }],
+  creator: "Roberto Solutions",
   openGraph: {
-    title: 'ROBERTO.SOLUTIONS',
-    description: 'Transforma tu negocio con software de alto impacto.',
-    url: 'https://tu-dominio.vercel.app', // Luego la cambiaremos por tu link real
-    siteName: 'Roberto Solutions',
-    images: [
-      {
-        url: '/opengraph-image.png', 
-        width: 1200,
-        height: 630,
-      },
-    ],
-    locale: 'es_PE',
-    type: 'website',
+    type: "website",
+    locale: "es_PE",
+    url: "https://tu-proyecto.vercel.app/", // Reemplaza con tu link real
+    title: "Roberto Solutions | Software e Impacto Digital",
+    description: "Digitaliza tu empresa con sistemas personalizados. Expertos en optimización de procesos en Perú.",
+    siteName: "Roberto Solutions",
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="es" className="scroll-smooth">
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
